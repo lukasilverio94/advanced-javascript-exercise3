@@ -69,3 +69,41 @@ ask(
     alert("You canceled the execution.");
   }
 );
+
+// ########################################################################################################
+
+// Exercise 4
+// Create an object calculator with three methods:
+
+// read() prompts for two values and saves them as object properties.
+// sum() returns the sum of saved values.
+// mul() multiplies saved values and returns the result.
+
+let calculator = {
+  read() {
+    this.value1 = +prompt("Enter first value:");
+    this.value2 = +prompt("Enter second value:");
+  },
+  sum() {
+    return this.value1 + this.value2;
+  },
+  mul() {
+    return this.value1 * this.value2;
+  },
+};
+
+calculator.read();
+alert(calculator.sum(1, 3));
+alert(calculator.mul(2, 3));
+
+// ########################################################################################################
+
+// Exercise 5
+// Write a function min(a,b) which returns the least of two numbers a and b. Use arrow function along with the question mark operator ?
+//solution
+
+const minFunction = (a = 0, b = 0) => {
+  return a < b ? a : b;
+};
+
+console.log(minFunction(5, 3));
